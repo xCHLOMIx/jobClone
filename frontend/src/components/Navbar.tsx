@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
             </Link>
             <div className='flex gap-2 items-center'>
                 <SecondaryButton text='All Jobs' link='/job-form' />
-                <PrimaryButton text='New Job' link='/job-form' icon={<IoIosAdd size={20}  />} />
+                <PrimaryButton text='New Job' link='/job-form' styles='' icon={<IoIosAdd className='font-black' size={20}  />} />
             </div>
         </div>
     )
