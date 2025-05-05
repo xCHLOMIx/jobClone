@@ -36,12 +36,15 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const { title, company, decription, location, application_method } =
-      req.body;
+    const { title, company, description, location, application_method } = req.body;
+
+    if (!title || !company || !description || !location || !application_method) {
+      return res.status(400).json({ error: "All fields are required" });
+    }
 
     const result = await pool.query(
       "INSERT INTO jobs (title, company, description, location, application_method) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-      [title, company, decription, location, application_method]
+      [title, company, description, location, application_method]
     );
 
     res.status(201).json(result.rows[0]);

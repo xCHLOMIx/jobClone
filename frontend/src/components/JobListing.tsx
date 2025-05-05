@@ -30,7 +30,7 @@ const JobListing: React.FC<Prop> = ({ job }) => {
                     </div>
                 </div>
             </div>
-            <Link to={`/${job.id}`}>
+            <Link to={`/job/${job.id}`}>
                 <button className='p-2 font-bold bg-orange-300 hover:bg-orange-400 transition duration-300 cursor-pointer flex items-center gap-2.5 text-xs w-max text-black'>
                     <IoEyeOutline size={18} />
                     <span>View details</span>

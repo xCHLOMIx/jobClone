@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
                 <h1 className='font-bold text-white text-2xl'>Job Clone</h1>
             </Link>
             <div className='flex gap-2 items-center'>
-                <SecondaryButton text='All Jobs' link='/job-form' />
-                <PrimaryButton text='New Job' link='/job-form' styles='' icon={<IoIosAdd className='font-black' size={20}  />} />
+                <SecondaryButton text='All Jobs' link='/' />
+                <PrimaryButton text='New Job' link='/job/new' icon={<IoIosAdd className='font-black' size={20}  />} />
             </div>
         </div>
     )

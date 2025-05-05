@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
-import JobsPage from './page/JobsPage'
+import JobsPage from './pages/JobsPage'
+import NewJob from './pages/NewJob'
+import JobDetails from './pages/JobDetails'
 
 function App() {
 
@@ -14,6 +16,14 @@ function App() {
             <Route
               path='/'
               element={<JobsPage />}
+            />
+            <Route
+              path='/job/new'
+              element={<NewJob />}
+            />
+            <Route
+              path='/job/:id'
+              element={<JobDetails />}
             />
           </Routes>
         </div>
